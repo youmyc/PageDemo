@@ -59,7 +59,7 @@ class ViewController: UIViewController {
 }
 ```
 
-##效果
+##Effect:
 
 
 ![](https://github.com/youmyc/PageDemo/blob/master/Screenshot/sreenshot1.png)
