@@ -64,4 +64,4 @@ class ViewController: UIViewController {
 ```
 
 
-![](https://github.com/youmyc/PageDemo/blob/master/Screenshot/sreenshot1.png)
+![](https://github.com/youmyc/PageDemo/blob/master/Screenshot/sreenshot1.png)![](https://github.com/youmyc/PageDemo/blob/master/Screenshot/sreenshot2.png)
