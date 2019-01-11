@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 fileprivate let screen_width = UIScreen.main.bounds.width
 fileprivate let screen_height = UIScreen.main.bounds.height
 
@@ -34,7 +33,7 @@ class ViewController: UIViewController {
         let statusHeight:CGFloat = screen_height >= 812 ? 44 : 20
         
         let titleFrame = CGRect(x: 0, y: statusHeight, width: screen_width, height: 44)
-        let titleView = YMPageTitleView(frame: titleFrame, titles: self?.titles ?? [], params: (30, 3, UIFont.systemFont(ofSize: 15)), cellSpace:30)
+        let titleView = YMPageTitleView(frame: titleFrame, titles: self?.titles ?? [], params: (30, 3, UIFont.systemFont(ofSize: 15)), cellSpace:30, scale:0.2)
         
         titleView.backgroundColor = .white
         titleView.delegate = self

@@ -57,7 +57,7 @@ class YMPageTitleView: UIView {
     
     var cellWidth:CGFloat = 0
     var cellSpace:CGFloat = 20
-    
+    fileprivate var scale:CGFloat = 0
     
     /// 初始化
     ///
@@ -67,17 +67,19 @@ class YMPageTitleView: UIView {
     ///   - params: (滚动条宽度，滚动条高度，字体)
     ///   - cellWidth: cell宽度
     ///   - cellSpace: cell间隔
+    ///   - scale: 缩放比例
     init(frame: CGRect,
          titles:[String],
          params:(CGFloat,CGFloat,UIFont) = (50,2,UIFont.boldSystemFont(ofSize: 14)),
          cellWidth:CGFloat = 0,
-         cellSpace:CGFloat = 20) {
+         cellSpace:CGFloat = 20,scale:CGFloat = 0) {
         self.titles = titles
         self.lineWidth = params.0
         self.lineHeight = params.1
         self.font = params.2
         self.cellWidth = cellWidth
         self.cellSpace = cellSpace
+        self.scale = scale
         super.init(frame: frame)
         // 设置UI界面
         setupUI()
@@ -153,6 +155,7 @@ extension YMPageTitleView {
         // 2.1.获取第一个Label
         guard let firstLabel = titleLabels.first else { return }
         firstLabel.textColor = UIColor(r: kSelectColor.0, g: kSelectColor.1, b: kSelectColor.2)
+        firstLabel.transform = CGAffineTransform(scaleX: 1 + scale, y: 1 + scale)
         
         // 2.2.设置scrollLine的属性
         scrollView.addSubview(scrollLine)
@@ -194,6 +197,9 @@ extension YMPageTitleView {
 // MARK:- 对外暴露的方法
 extension YMPageTitleView {
     func setTitleWithProgress(_ progress : CGFloat, sourceIndex : Int, targetIndex : Int) {
+        
+        let maxScale = 1 + scale
+        
         // 1.取出sourceLabel/targetLabel
         let sourceLabel = titleLabels[sourceIndex]
         let targetLabel = titleLabels[targetIndex]
@@ -212,7 +218,12 @@ extension YMPageTitleView {
         
         // 3.2.变化targetLabel
         targetLabel.textColor = UIColor(r: kNormalColor.0 + colorDelta.0 * progress, g: kNormalColor.1 + colorDelta.1 * progress, b: kNormalColor.2 + colorDelta.2 * progress)
+        
+        // sourceLabel缩放
+        sourceLabel.transform = CGAffineTransform(scaleX: maxScale - scale * progress, y:maxScale - scale * progress)
 
+        // targetLabel缩放
+        targetLabel.transform = CGAffineTransform(scaleX: 1 + scale * progress, y:1 + scale * progress)
         
         if progress == 1.0 {
             // 4.记录最新的index
