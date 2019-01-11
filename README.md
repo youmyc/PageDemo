@@ -1,6 +1,6 @@
 # PageDemo
 
-##Usage：
+## Usage：
 
 Just download the project, and drag and drop the "PageDemo/Common" folder in your project.
 
@@ -59,9 +59,6 @@ class ViewController: UIViewController {
 }
 ```
 
-##Effect:
-```
-```
+## Effect:
 
-
-![](https://github.com/youmyc/PageDemo/blob/master/Screenshot/screenshot1.png)![](https://github.com/youmyc/PageDemo/blob/master/Screenshot/screenshot2.png)
+![](https://github.com/youmyc/PageDemo/blob/master/Screenshot/screenshot1.png) ![](https://github.com/youmyc/PageDemo/blob/master/Screenshot/screenshot2.png)
