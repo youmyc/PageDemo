@@ -24,6 +24,7 @@
 		042340AC21E4398F003DCA08 /* AttentionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042340AB21E4398F003DCA08 /* AttentionViewController.swift */; };
 		042340AE21E4456E003DCA08 /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042340AD21E4456E003DCA08 /* LiveViewController.swift */; };
 		042340B021E4457B003DCA08 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042340AF21E4457B003DCA08 /* VideoViewController.swift */; };
+		04A1C5C321F1A611001F4B5C /* TableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1C5C221F1A611001F4B5C /* TableVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		042340AB21E4398F003DCA08 /* AttentionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttentionViewController.swift; sourceTree = "<group>"; };
 		042340AD21E4456E003DCA08 /* LiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
 		042340AF21E4457B003DCA08 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		04A1C5C221F1A611001F4B5C /* TableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				042340A221E437D5003DCA08 /* Common */,
 				0423406E21E2F7DE003DCA08 /* AppDelegate.swift */,
 				0423407021E2F7DE003DCA08 /* ViewController.swift */,
+				04A1C5C221F1A611001F4B5C /* TableVC.swift */,
 				042340A321E438A0003DCA08 /* BaseViewController.swift */,
 				042340A421E438A0003DCA08 /* BaseViewController.xib */,
 				042340A721E43946003DCA08 /* RecommandViewController.swift */,
@@ -304,6 +307,7 @@
 				042340B021E4457B003DCA08 /* VideoViewController.swift in Sources */,
 				042340AC21E4398F003DCA08 /* AttentionViewController.swift in Sources */,
 				0423409F21E2F92A003DCA08 /* YMPageTitleView.swift in Sources */,
+				04A1C5C321F1A611001F4B5C /* TableVC.swift in Sources */,
 				042340A521E438A0003DCA08 /* BaseViewController.swift in Sources */,
 				042340AA21E4395A003DCA08 /* NewsViewController.swift in Sources */,
 			);

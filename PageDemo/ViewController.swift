@@ -16,6 +16,8 @@ class ViewController: UIViewController {
 //    let titles = ["关注", "推荐", "新闻"]
     
     let titles = ["关注", "推荐", "新闻", "火山视频", "直播Live"]
+    
+    var scale:CGFloat?
 
     lazy var childVcs:[BaseViewController] = {
         var childVcs = [BaseViewController]()
@@ -32,8 +34,8 @@ class ViewController: UIViewController {
         
         let statusHeight:CGFloat = screen_height >= 812 ? 44 : 20
         
-        let titleFrame = CGRect(x: 0, y: statusHeight, width: screen_width, height: 44)
-        let titleView = YMPageTitleView(frame: titleFrame, titles: self?.titles ?? [], params: (30, 3, UIFont.systemFont(ofSize: 15)), cellSpace:30, scale:0.2)
+        let titleFrame = CGRect(x: 0, y: statusHeight + 44, width: screen_width, height: 44)
+        let titleView = YMPageTitleView(frame: titleFrame, titles: self?.titles ?? [], params: (30, 3, UIFont.systemFont(ofSize: 15)), cellSpace:30, scale: scale != nil ? scale! : 0)
         
         titleView.backgroundColor = .white
         titleView.delegate = self
