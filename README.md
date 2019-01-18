@@ -62,3 +62,4 @@ class ViewController: UIViewController {
 ## Effect:
 
 ![](https://github.com/youmyc/PageDemo/blob/master/page.gif)
+![](https://gitee.com/yom/PageDemo/raw/master/page.gif)
